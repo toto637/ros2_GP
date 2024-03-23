@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_name">
+
+    <gazebo reference= "right_wheel">
+        <mu1>100000000000000.0</mu1>
+        <mu2>100000000000000.0</mu2>
+        <kp>1000000000000.0</kp>
+        <kd>1000000000000.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>0.1</maxVel>
+        <fdirl>0 1 0</fdirl>
+
+    </gazebo>
+
+    <gazebo reference= "left_wheel">
+        <mu1>100000000000000.0</mu1>
+        <mu2>100000000000000.0</mu2>
+        <kp>1000000000000.0</kp>
+        <kd>1000000000000.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>0.1</maxVel>
+        <fdirl>0 1 0</fdirl>
+
+    </gazebo>
+
+</robot>

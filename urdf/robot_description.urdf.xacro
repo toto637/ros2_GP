@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_name">
+
+
+    <xacro:include filename="$(find my_robot_description)/urdf/robot_description_gazebo.xacro"/>
+    
+
+
+    <link name="base_footprint">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </link>
+
+
+    <!--_______________________ body link __________________________-->
+
+    <link name="base_link">
+
+
+        <inertial>
+            <mass value="2.0" />
+
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <inertia ixx="0.05" ixy="0.0" ixz="0.0" iyy="0.05" iyz="0.0" izz="0.1" />
+        </inertial>
+
+
+
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_body.stl" scale="1.0 1.0 1.0"/>
+            </geometry>
+        </visual>
+
+
+
+
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_body.stl" scale="1.0 1.0 1.0"/>
+            </geometry>
+        </collision>
+
+    </link>
+
+    <!--_______________base foot print  and  body joint_______________-->
+
+    <joint name="base_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.069887" rpy="0.0 0.0 0.0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!--_______________________right wheel link_______________________-->
+
+    <link name= "right_wheel">
+
+        <inertial>
+            <origin xyz="0 0.0 0" rpy="0 0 0" />
+            <mass value="0.0530086043217644" />
+            <inertia ixx="1.8792911368909E-05" ixy="3.31256392204584E-10" ixz="-1.14082001662767E-08" iyy="3.11510738759073E-05" iyz="-3.60499245082192E-10" izz="1.88266886146847E-05" />
+        </inertial>
+
+
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+
+            <geometry>
+                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_r_wheel.stl" scale="1.0 1.0 1.0"/>
+            </geometry>
+        </visual>
+
+
+
+
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_r_wheel.stl" scale="1.0 1.0 1.0"/>
+            </geometry>
+
+        </collision>
+
+    </link>
+    <!--_________________body & right wheel joint_________________-->
+
+    <joint name="right_wheel_joint " type="continuous">
+        <parent link="base_link"/>
+        <child link="right_wheel"/>
+        <axis xyz="0 1 0"/>
+        <origin xyz="-0.004419 -0.144966 -0.032927" rpy="0 0 0"/>
+    </joint>
+
+    <!--_______________________left wheel link_______________________-->
+
+    <link name= "left_wheel">
+
+
+        <inertial>
+            <origin xyz="0 0.0 0" rpy="0 0 0" />
+            <mass value="0.0530086043217644" />
+            <inertia ixx="1.8792911368909E-05" ixy="3.31256392204584E-10" ixz="-1.14082001662767E-08" iyy="3.11510738759073E-05" iyz="-3.60499245082192E-10" izz="1.88266886146847E-05" />
+        </inertial>
+
+
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+
+            <geometry>
+                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_l_wheel.stl" scale="1.0 1.0 1.0"/>
+            </geometry>
+        </visual>
+
+        <!-- ____________________________-_____-->
+
+
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_l_wheel.stl" scale="1.0 1.0 1.0"/>
+            </geometry>
+        </collision>
+
+    </link>
+
+
+    <!--___________________body & left wheel joint___________________-->
+
+    <joint name="left_joint " type="continuous">
+        <parent link="base_link"/>
+        <child link="left_wheel"/>
+        <axis xyz="0 1 0"/>
+        <origin xyz="0.004419 0.144966 -0.032927" rpy="0 0 0"/>
+    </joint>
+
+    <!--______________________________________________________________-->
+    <!-- <inertial>
+        <mass value="2.0" />
+    
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.05" ixy="0.0" ixz="0.0" iyy="0.05" iyz="0.0" izz="0.1" />
+    </inertial> -->
+</robot>

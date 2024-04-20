@@ -53,11 +53,19 @@ def generate_launch_description():
          output="screen"
     )
 
+    rviz2_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        output= "screen"
+    )
+
 
     return LaunchDescription([ model_arg,
                               robot_state_publisher,
                               env_var,
                               start_gazebo_server,
                               start_gazebo_client,
-                              spawn_robot                         
+                              spawn_robot,
+                              rviz2_node                         
                              ])

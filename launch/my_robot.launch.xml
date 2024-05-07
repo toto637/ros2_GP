@@ -1,6 +1,6 @@
 <launch>
 
-    <arg name="urdf_path" default="/home/kareem/ros2_ws/src/my_robot_description/urdf/robot_description.urdf.xacro" />
+    <arg name="urdf_path" default="/home/thomas/ros2_ws/src/my_robot_description/urdf/robot_description.urdf.xacro" />
     
     <!-- Run xacro to generate URDF -->
     <node pkg="xacro" exec="xacro" name="xacro" output="screen" 

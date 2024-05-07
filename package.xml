@@ -4,7 +4,7 @@
   <name>my_robot_description</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="kareem@todo.todo">kareem</maintainer>
+  <maintainer email="thomas@todo.todo">thomas</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

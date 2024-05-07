@@ -30,7 +30,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_body.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_body.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </visual>
 
@@ -40,7 +40,7 @@
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_body.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_body.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </collision>
 
@@ -69,7 +69,7 @@
             <origin xyz="0 0 0 " rpy="0.0 0.0 0.0"/>
 
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_r_wheel.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_r_wheel.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </visual>
 
@@ -79,7 +79,7 @@
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_r_wheel.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_r_wheel.stl" scale="1.0 1.0 1.0"/>
             </geometry>
 
         </collision>
@@ -110,7 +110,7 @@
             <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
 
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_l_wheel.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_l_wheel.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </visual>
 
@@ -120,7 +120,7 @@
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_l_wheel.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_l_wheel.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </collision>
 
@@ -149,13 +149,13 @@
         <origin xyz="0.0 0 0.0" rpy="0 0 0" />
         <visual>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_caster.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_caster.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </visual>
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/f_caster.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/f_caster.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </collision>
 
@@ -181,14 +181,14 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/r_caster.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/r_caster.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </visual>
 
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="file:///home/kareem/ros2_ws/src/my_robot_description/meshes/r_caster.stl" scale="1.0 1.0 1.0"/>
+                <mesh filename="$(find my_robot_description)/meshes/r_caster.stl" scale="1.0 1.0 1.0"/>
             </geometry>
         </collision>
 

@@ -1,6 +1,6 @@
 <launch>
     <!-- Define parameters -->
-    <arg name="model" default="/home/kareem/ros2_ws/src/my_robot_description/urdf/robot_description.urdf.xacro"/>
+    <arg name="model" default="/home/thomas/ros2_ws/src/my_robot_description/urdf/robot_description.urdf.xacro"/>
 
     <!-- Set environment variable for Gazebo model path -->
     <env name="GAZEBO_MODEL_PATH" value="$(find my_robot_description)/models:$(ament_prefix_path my_robot_description)/share"/>

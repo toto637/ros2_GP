@@ -1,5 +1,5 @@
 {
-    "ros.distro": "foxy",
+    "ros.distro": "humble",
     "python.autoComplete.extraPaths": [
         "/home/thomas-medhat/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
